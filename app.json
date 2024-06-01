@@ -2,6 +2,11 @@
   "expo": {
     "name": "LabTerminal",
     "slug": "LabTerminal",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "extra": {
+      "eas": {
+        "projectId": "1a1c0507-1dc3-4e21-a176-a8bf45febb8e"
+      }
+    }
   }
 }
