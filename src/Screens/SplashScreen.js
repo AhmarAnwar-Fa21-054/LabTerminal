@@ -18,7 +18,7 @@ export default function SplashScreen({ navigation }) {
     useEffect(() => {
         async function fun() {
             if (isFocused) {
-                await dispatch(actions.getUserLocation())
+                await dispatch(actions.getUserLocation()) //* why promise
                 await dispatch(actions.getSelectedMethod())
                 await dispatch(actions.getSelectedSchool())
                 console.log({selectedMethod:store.getState().selectedMethod,selectedSchool:store.getState().selectedSchool});

@@ -26,7 +26,7 @@ export default function Settings() {
             async function selectMethodHandler() {
                 // console.log("selectMethodKey", selectMethodKey);
                 setAnArrayOfMethods(anArrayOfMethods.map((item) => {
-                    if (item.key == (selectMethodKey||store.getState().data.meta.method.id)) {
+                    if (item.key === (selectMethodKey===0?0:(selectMethodKey||store.getState().data.meta.method.id))) {
 
                         return { ...item, backgroundColor: "#6FDCE3" }
                     }

@@ -1,4 +1,4 @@
-package com.labterminal
+package com.ahmar_anwar.LabTerminal
 
 import android.os.Build
 import android.os.Bundle

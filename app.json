@@ -7,6 +7,9 @@
       "eas": {
         "projectId": "1a1c0507-1dc3-4e21-a176-a8bf45febb8e"
       }
+    },
+    "android": {
+      "package": "com.ahmar_anwar.LabTerminal"
     }
   }
 }

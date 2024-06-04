@@ -13,6 +13,8 @@ export default function PrayerTimes() {
     let [method, setMethod] = useState()
     let [school, setSchool] = useState()
     let [fiveNamaz, setFiveNamaz] = useState()
+    let isFocused = useIsFocused()
+    let [intervalId,setIntervalId] = useState()
     // let [startAndEndMarks, setStartAndEndMarks] = useState()
     let [nextNamaz, setNextNamaz] = useState({})
     let [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit",second:"2-digit", hour12: false }))
@@ -35,11 +37,15 @@ export default function PrayerTimes() {
         }
     }, [currentTime, fiveNamaz])
     useEffect(() => {
-        let intervalId = setInterval(() => {
+        if(isFocused){
+         setIntervalId(setInterval(() => {
             setCurrentTime(new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit",second:"2-digit", hour12: false }))
-        },1000)
+        },1000))
+    }
+    else{
         return () => clearInterval(intervalId)
-    }, [])
+    }
+    }, [isFocused])
     useEffect(() => {
         if (store.getState().visited) {
             // navigation.navigate("SplashScreen")

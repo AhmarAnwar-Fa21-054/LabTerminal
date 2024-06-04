@@ -1,4 +1,4 @@
-package com.labterminal
+package com.ahmar_anwar.LabTerminal
 
 import android.app.Application
 import android.content.res.Configuration
